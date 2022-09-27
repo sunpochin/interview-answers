@@ -1,3 +1,56 @@
+ref.:
+https://ithelp.ithome.com.tw/articles/10256018
+
+https://ithelp.ithome.com.tw/articles/10256017
+
+https://medium.com/starbugs/%E9%9D%A2%E8%A9%A6-%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E4%B8%80%E5%AE%9A%E8%A6%81%E6%9C%83%E7%9A%84-js-%E8%A7%80%E5%BF%B5%E9%A1%8C-%E4%B8%AD%E8%8B%B1%E5%B0%8D%E7%85%A7%E4%B9%8B%E4%B8%8A%E7%AF%87-3b0a3feda14f
+
+## 〔JS基礎觀念〕
+1. 變數有效範圍與var/let/const差異
+ - JavaScript在ES6中新增了“let”宣告方式來取代”var”。在ES6之前，JavaScript的世界中並沒有區塊域(block)的概念，因此經常使用”var”宣告所有的變數，
+ - var、let 一個是函數變數，另一個是區塊變數
+ - 無宣告: global. var: function. let, const: block.
+ - 
+2. Scope 作用域
+ - Where and how to look for things. JS have two lexical scopes global and function
+ - 變數在程式中可以被存取的範圍，可分為區域變數，全域變數。
+
+
+3. 函式與函式的作用域
+3. Hoisting提升是什麼?
+ - JavaScript’s default behavior of moving declarations to the top.
+
+4.Closure閉包是什麼?
+ - 是函式以及該函式被宣告時所在的作用域環境（lexical environment）的組合。
+ - https://openhome.cc/zh-tw/javascript/function/closure/
+
+
+
+
+5.Callback 回呼是什麼、Callback Hell是什麼以及為何會產生?
+6.JS 事件傳遞機制:捕獲跟冒泡
+7.this 指向、如何強制綁定this (call/apply/bind差異)
+8.Event Loop
+9.同步與非同步、promise是什麼?
+
+## 〔其他網路基礎觀念〕
+1.http協定是什麼?
+2.cookie/local Storage 如何運作?
+3.MVC是什麼? MVVM又是什麼?
+4.Restful API是什麼?
+5.SPA是什麼?
+6.Client端跟Server端資料如何傳遞、輸入網址後頁面是怎麼render出來的?
+
+
+
+
+## 
+1. 變數有效範圍與var/let/const差異
+
+
+
+
+
 ## JS
 - https://www.g2i.co/blog/2021-front-end-developer-interview-questions-and-answers
 1. What is the difference between == and ===?
