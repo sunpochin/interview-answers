@@ -81,6 +81,33 @@ add(1, 1, function (sum1) {
 	});
 });
 
-add(1, 1, function (sum1)).then
+console.log('\n');
 
+const addPromise = function (a, b) {
+	return new Promise((resolve, reject) => {
+		resolve(a + b);
+	});
+};
 
+let ret = addPromise(1, 1)
+	.then((sum1) => {
+		return addPromise(1, sum1);
+	})
+	.then((sum1) => {
+		return addPromise(1, sum1);
+	})
+	.then((sum1) => {
+		return addPromise(1, sum1);
+	})
+	.then((sum1) => {
+		console.log('sum1: ', sum1);
+	});
+
+(async () => {
+	let ret = await addPromise(1, 1);
+  ret = await addPromise(ret, 1);
+  ret = await addPromise(ret, 1);
+  ret = await addPromise(ret, 1);
+  ret = await addPromise(ret, 1);
+	console.log('async ret: ', ret);
+})();
