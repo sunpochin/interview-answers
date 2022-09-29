@@ -57,7 +57,8 @@ async/await 其實是 promise 語法糖，讓你可以用更簡潔的方法達�
 4. Restful API是什麼?
 5. SPA是什麼?
 6. Client端跟Server端資料如何傳遞、輸入網址後頁面是怎麼render出來的?
-
+7. 瀏覽器得到 HTML, CSS 之後如何渲染成畫面。
+8. 使用 Array.reduce 完成。
 
 ### in English
 - https://www.g2i.co/blog/2021-front-end-developer-interview-questions-and-answers
