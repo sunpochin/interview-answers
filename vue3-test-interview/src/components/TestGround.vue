@@ -16,6 +16,12 @@
 		<input type="checkbox" />
 		<input type="text" />
 	</div>
+
+  <div class="outside">
+    <div class="inside">
+      inside
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -74,6 +80,16 @@ fetchMultipleAPIs()
 </script>
 
 <style lang="scss" scoped>
+
+.outside {
+  width: 300px;
+  height: 300px;
+  background-color: #ffba10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .test-text {
 	background-color: green;
 }

@@ -55,6 +55,10 @@ ref. 感謝前輩們分享：
 8. Event Loop
 9. 同步與非同步、promise 是什麼?
 
+- 請說明事件循環(event loop)，以及 JS 處理同步/異步的順序。
+- map() 跟 forEach() 的差別:
+  map() 會回傳一個新的陣列，forEach() 不會回傳任何值。
+
 ## 〔其他網路基礎觀念〕
 
 1. http 協定是什麼?
