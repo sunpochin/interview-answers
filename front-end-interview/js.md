@@ -76,34 +76,94 @@ ref. 感謝前輩們分享：
 
 - https://www.g2i.co/blog/2021-front-end-developer-interview-questions-and-answers
 
-1. What is the difference between == and ===?
+10. What is the difference between == and ===?
 
-   - Doubles equals checks for value only. Before checking, it does any necessary type coercion. For example, the string "1" will be == to the integer 1, but it will not be ===. Many projects these days prefer to always use ===. Although, some folks advocate writing code that works well with the == type coercion.
-   -
+- Doubles equals checks for value only. Before checking, it does any necessary type coercion. For example, the string "1" will be == to the integer 1, but it will not be ===. Many projects these days prefer to always use ===. Although, some folks advocate writing code that works well with the == type coercion.
+-
 
-1. What is the `this` keyword in JavaScript?
+11. What is the `this` keyword in JavaScript?
 
-   - this is a little tricky in JavaScript. Its value is determined by what the function you are inside of is called. In the global state, this is set to the window object. The value of this also depends on whether or not you are in strict mode. Inside a top-level function, a strict mode this will be undefined, whereas a non-strict mode this will be the window object. It's also worth knowing that the value of this can be overwritten with the bind method.
+- this is a little tricky in JavaScript. Its value is determined by what the function you are inside of is called. In the global state, this is set to the window object. The value of this also depends on whether or not you are in strict mode. Inside a top-level function, a strict mode this will be undefined, whereas a non-strict mode this will be the window object. It's also worth knowing that the value of this can be overwritten with the bind method.
 
-1. What is the difference between let, const, and var?
+12. What is the difference between let, const, and var?
 
-   - Originally, var was the only option JavaScript had for defining variables. In ES6, we got const and let as additional options. The important takeaways are:
-     1. Variables defined with const cannot be reassigned.
-     2. Const and let variables are block-scoped.
-     3. Var variables are function scoped.
-     4. Variables defined with var are hoisted.
-     - Demo: https://jsfiddle.net/sunpochin/3ezog6uq/6/
-     - https://shubo.io/javascript-hoisting/ quote:"關於 var 可以「重複宣告」以及「先使用後宣告」，你可能會很好奇，這樣為什麼會對？畢竟這違反我們對一般程式語言的認知。其實這是因為：在 JavaScript 中，不管你在函數中的哪一行用 var 宣告變數，一律視為在函數的第一行宣告。也就是說，不論你宣告 var 變數的位置在哪，宣告的動作一律都會被「抬升」到函式的最頂端，這個特性就叫做 hoisting (提升)。要注意的是，只有「宣告」這個動作有 hoisting (提升) 的特性，賦值 (把值指定給變數) 的動作不會 hoisting。"
-     - function hoisting: "這個特性可以解決一個問題，也就是兩個函數需要互相呼叫彼此的狀態，也就是 A() 裡面會呼叫到 B()，而 B() 裡面會呼叫的 A() 的遞迴狀況。"
+- Originally, var was the only option JavaScript had for defining variables. In ES6, we got const and let as additional options. The important takeaways are:
+  1.  Variables defined with const cannot be reassigned.
+  2.  Const and let variables are block-scoped.
+  3.  Var variables are function scoped.
+  4.  Variables defined with var are hoisted.
+  - Demo: https://jsfiddle.net/sunpochin/3ezog6uq/6/
+  - https://shubo.io/javascript-hoisting/ quote:"關於 var 可以「重複宣告」以及「先使用後宣告」，你可能會很好奇，這樣為什麼會對？畢竟這違反我們對一般程式語言的認知。其實這是因為：在 JavaScript 中，不管你在函數中的哪一行用 var 宣告變數，一律視為在函數的第一行宣告。也就是說，不論你宣告 var 變數的位置在哪，宣告的動作一律都會被「抬升」到函式的最頂端，這個特性就叫做 hoisting (提升)。要注意的是，只有「宣告」這個動作有 hoisting (提升) 的特性，賦值 (把值指定給變數) 的動作不會 hoisting。"
+  - function hoisting: "這個特性可以解決一個問題，也就是兩個函數需要互相呼叫彼此的狀態，也就是 A() 裡面會呼叫到 B()，而 B() 裡面會呼叫的 A() 的遞迴狀況。"
 
-1. What is the difference between == and ===?
-   - type === check type.
-   - https://jsfiddle.net/sunpochin/Lthqewoj/8/
-1. How can you access HTML elements with JavaScript?
+13. What is the difference between == and ===?
 
-   - Familiarize yourself with getElementById, querySelector, and querySelectorAll.
+- type === check type.
+- https://jsfiddle.net/sunpochin/Lthqewoj/8/
 
-1. What options do we have to store data?
-   - You can store user data in localStorage, cookies, or sessionStorage.
-1. What is functional programming in JavaScript?
-   - Functional programming refers to using pure functions. In the context of JavaScript, this means familiarizing yourself with map, filter, and reduce. It's also worth understanding the concept of immutability.
+14. How can you access HTML elements with JavaScript?
+
+- Familiarize yourself with getElementById, querySelector, and querySelectorAll.
+
+15. What options do we have to store data?
+
+- You can store user data in localStorage, cookies, or sessionStorage.
+
+16. What is functional programming in JavaScript?
+
+- Functional programming refers to using pure functions. In the context of JavaScript, this means familiarizing yourself with map, filter, and reduce. It's also worth understanding the concept of immutability.
+
+17. cookie , local storage , session storage 的差別？
+
+- Cookie、Local Storage 和 Session Storage 是用來在網頁瀏覽器中儲存資料的不同機制，它們有不同的特點和使用情境。以下是它們之間的主要差異：
+
+  Cookie：
+
+  Cookie 是一種小型的文字檔案，通常以鍵值對的形式存儲在瀏覽器中。
+  Cookie 的主要用途是在客戶端和伺服器之間儲存有關用戶的資訊，例如身份驗證、追蹤用戶訪問歷史等。
+  Cookie 有一個過期時間，可以在設定時指定，可以是會話期間存在或長期存在。
+  由於每次請求都會將 Cookie 發送到伺服器，因此它們可能會影響網站性能。
+  Local Storage：
+
+  Local Storage 是一種用來在瀏覽器中永久儲存資料的機制。這表示儲存在 Local Storage 中的資料不會在瀏覽器關閉後被清除，除非明確刪除或由網頁程式員覆寫。
+  Local Storage 使用 JavaScript API 來儲存和檢索資料，並且以鍵值對的形式存儲。
+  它的容量通常比 Cookie 大得多，通常在 5MB 到 10MB 之間，取決於瀏覽器。
+  Session Storage：
+
+  Session Storage 與 Local Storage 類似，但它的生命週期限於當前瀏覽器會話。當瀏覽器窗口或選項卡被關閉時，Session Storage 中的資料將被清除。
+  Session Storage 也使用 JavaScript API 來儲存和檢索資料，並且以鍵值對的形式存儲。
+  與 Local Storage 一樣，Session Storage 的容量通常在 5MB 到 10MB 之間。
+  總結來說，Cookie 主要用於在客戶端和伺服器之間共享資訊，Local Storage 和 Session Storage 則用於在客戶端瀏覽器中儲存資料，它們的差異在於生命週期和容量。開發者需要根據具體的使用情境選擇合適的儲存機制。如果需要永久性儲存並跨會話共享資料，則 Local Storage 可能是最好的選擇，而 Session Storage 則適用於僅在當前會話中使用的資料。
+
+18. 如果 cookie 不設定過期時間，會怎麼樣？
+    如果不設定 Cookie 的過期時間（或將過期時間設為 0），則該 Cookie 將成為會話 Cookie（Session Cookie）。這意味著該 Cookie 僅在當前瀏覽器會話中存在，並且將在瀏覽器關閉後被自動刪除。這樣的 Cookie 通常用於在單個瀏覽器會話中儲存臨時資訊，如購物車內容或用戶登錄狀態。
+    總結來說，如果 Cookie 不設定過期時間，則它將成為會話 Cookie，只在當前瀏覽器會話中有效，並在關閉瀏覽器後自動刪除。這對於需要短期儲存的臨時資訊非常有用，但對於需要長期儲存的資訊，你需要設定 Cookie 的過期時間，以確保它在瀏覽器會話之間持久存在。
+19. this.
+
+20. prototype, prototype chain, inheritance 是什麼？跟 object-oriented programming 的差別？
+
+21. setTimeout 機制？
+    setTimeout 是 JavaScript 中的一個計時器函數，用於在指定的時間延遲之後執行一段程式碼。這個函數有兩個主要參數：
+
+    函數（Function）：要延遲執行的 JavaScript 函數或代碼塊。
+
+    時間（Time）：延遲的時間，以毫秒（milliseconds，ms）為單位。也就是指定在多長時間之後執行函數。
+
+    setTimeout 的基本語法如下：
+
+    javascript
+    Copy code
+    setTimeout(function, time);
+    下面是一個簡單的示例，演示如何使用 setTimeout：
+
+    javascript
+    Copy code
+    // 延遲 3 秒後執行的函數
+    function delayedFunction() {
+    console.log('這個函數將在 3 秒後執行。');
+    }
+
+    setTimeout(delayedFunction, 3000); // 延遲 3000 毫秒（3 秒）
+    當你調用 setTimeout 時，它會將指定的函數放入一個等待執行的佇列中，並在指定的時間（毫秒數後）將該函數移到執行佇列中。但值得注意的是，setTimeout 不保證函數將在指定的時間精確執行，因為執行緒可能受到其他代碼的影響。執行時間可能有些變化，但通常非常接近指定的時間。
+
+    另外，如果你希望定期重複執行一段程式碼，可以使用 setInterval 函數，它與 setTimeout 類似，但會定期重複執行指定的函數。

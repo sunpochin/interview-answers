@@ -25,6 +25,51 @@
 </template>
 
 <script setup>
+{
+  console.log(avar);
+  let avar;
+}
+
+
+// 創建一個 Animal 構造函數
+function Animal(name) {
+  this.name = name;
+}
+
+// 在 Animal 的原型上添加一個方法
+Animal.prototype.makeSound = function () {
+  console.log(this.name + ' 發出聲音');
+};
+
+// 創建一個 Dog 構造函數，它繼承自 Animal
+function Dog(name, breed) {
+  Animal.call(this, name);
+  this.breed = breed;
+}
+
+// 使用 Object.create 創建一個新對象，使其原型繼承自 Animal.prototype
+Dog.prototype = Object.create(Animal.prototype);
+
+// 修復 Dog 的 constructor 參考
+Dog.prototype.constructor = Dog;
+
+// 在 Dog 的原型上添加一個方法
+Dog.prototype.fetch = function () {
+  console.log(this.name + ' 抓東西');
+};
+
+// 創建一個 Dog 對象
+var dog1 = new Dog('Buddy', 'Golden Retriever');
+
+// 調用 Dog 和 Animal 的方法
+dog1.makeSound(); // 輸出：Buddy 發出聲音
+dog1.fetch();     // 輸出：Buddy 抓東西
+
+
+
+
+
+
 fetch('https://jsonplaceholder.typicode.com/todos/1')
 	.then((response) => response.json())
 	.then((json) => console.log(json));
